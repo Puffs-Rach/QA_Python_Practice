@@ -9,3 +9,10 @@ print("Perimeter of the rectangle:", perimeter)
 
 area = length * width
 print("Area of the rectangle", area)
+
+name = "root"
+
+if name not in ("root", "admin", "user"):
+    print("accepted")
+else:
+    print("invalid")
