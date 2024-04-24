@@ -176,3 +176,73 @@ for i in range(1,3):
 # for each name prints it out + "is great".
 
 # while loop
+
+# functions - a block of code - either preforms a task or returns a value.
+# repeatability. 
+
+def greet(name): #parameters that in arguments
+    print(f"hi {name}")
+greet("chris")
+
+
+def greet_1(first_name, second_name, age):
+    print(f"{first_name} {second_name} is {age}")
+
+greet_1("chris", "reeves", 30)
+# on the command line cant use print and cant use input. better to use return as we can store the value.
+
+def greeter(name):
+    return f"hello {name}"
+
+    # not going to be doing anything conditional, no printing required. Can store this in a data type variable.
+
+x = greeter("chris")
+print(x)
+
+# default is def values
+# parameters in python
+
+def greet3(name, age=10 =):
+    return f"{name} is {age}"
+
+print(greet3("chris")) # chris is 10
+print(greet3("chris, 20")) # chris is 20
+
+def make_Pizza(size, *toppings):
+    print(f"order for {size}- inch pizza, with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_Pizza(12, "mushrooms","Green peppers")
+
+# key word arguments- kwargs
+# send args as key:value pairs.
+
+def fruit_list(fruit1, fruit2, fruit3):
+    print(f"fav fruit is {fruit1}")
+    print(f)
+
+#** is a kwarg
+
+def fav_food(**food):
+    print(f"fav food is", food["dessert"], "not", food["fruit"])
+
+    fave_food(dessert="Ice-cream", fruit="apple", dairy="milk")
+    # fave food is dessert not apple
+
+# / - a marker dividig positional-only parameters from the rest
+# before / the params must be in order.
+
+def example(a, b, c, )
+
+
+setting up parameters, wat do I want to be passed through. 
+
+print("my name is {}, iam {}, my height is {}".format(name, age, height))
+
+x = "my name is {}, i am {}, my height is {}"
+print(x.format(name))
+
+
+# list comprehension
+- previous labs 5 and 6, extra functions challeges if time. rock paper scissors app (if time but tomorrow as well)
