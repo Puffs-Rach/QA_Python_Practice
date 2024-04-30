@@ -22,12 +22,12 @@ class password_checker:
                 self.specialChars += 1
 
     def check_length_strength(self):
-        if self.length <= 20:
+        if self.length >= 20:
             print("The strength of password is super strong.\n")
         elif self.length >= 15:
             print("The strength of your password is good.\n")
         elif self.length >= 10:
-            print("The strength of your password is moderate.\n")
+            print("The strength of your password is not great.\n")
         elif self.length >= 7:
             print("The strength of your password is weak, possibly think about improving it.\n")
 
