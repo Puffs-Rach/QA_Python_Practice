@@ -1,4 +1,4 @@
-class PasswordChecker:
+class password_checker:
     def __init__(self, password):
         self.password = password
         self.length = len(password)
@@ -25,11 +25,11 @@ class PasswordChecker:
         if self.length >= 20:
             print("The strength of password is super strong.\n")
         elif self.length >= 15:
-            print("The strength of your password is strongish.\n")
+            print("The strength of your password is good.\n")
         elif self.length >= 10:
             print("The strength of your password is moderate.\n")
         elif self.length >= 7:
-            print("The strength of your password is weak.")
+            print("The strength of your password is weak, possibly think about improving it.")
 
     def check_upper_lower_special_strength(self):
         if self.upperChars == 0:
@@ -59,7 +59,7 @@ class PasswordChecker:
 
 
 password = input("Please enter password here: ")
-checker = PasswordChecker(password)
+checker = password_checker(password)
 checker.confirm_password()
 
 
