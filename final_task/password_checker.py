@@ -22,14 +22,18 @@ class password_checker:
                 self.specialChars += 1
 
     def check_length_strength(self):
-        if self.length >= 20:
+        if self.length <= 20:
             print("The strength of password is super strong.\n")
         elif self.length >= 15:
             print("The strength of your password is good.\n")
         elif self.length >= 10:
             print("The strength of your password is moderate.\n")
         elif self.length >= 7:
-            print("The strength of your password is weak, possibly think about improving it.")
+            print("The strength of your password is weak, possibly think about improving it.\n")
+
+    def check_space(self):
+        if ' ' in self.password:
+            print("Please do not include a space, make sure your password is all one word. \n")
 
     def check_upper_lower_special_strength(self):
         if self.upperChars == 0:
@@ -48,7 +52,7 @@ class password_checker:
             "password!"
         ]
         if self.password in common_passwords:
-            print(f"Use a stronger password '{self.password}' is used too often and not safe enough.")
+            print(f"Use a stronger password '{self.password}' is used too often and not safe enough.\n")
 
     def confirm_password(self):
         if self.check_length():
@@ -56,9 +60,10 @@ class password_checker:
             self.check_length_strength()
             self.check_upper_lower_special_strength()
             self.check_common_passwords()
+            self.check_space()
 
 
-password = input("Please enter password here: ")
+password = input("Please enter password here and make sure to include an uppercase and lower case character: \n")
 checker = password_checker(password)
 checker.confirm_password()
 
